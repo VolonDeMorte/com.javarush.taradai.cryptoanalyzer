@@ -14,7 +14,7 @@ public class Texts {
     public static final String ERROR_KEY = "Этот ключ не подходит, попробуем другой?";
     public static final String EXIT = "Всего хорошего. Было приятно с Вами поработать.";
     public static final String REQUEST_FILE_PATH = "Введите путь к исходному файлу:";
-    public static final String REQUEST_KEY = "Введите путь к исходному файлу:";
+    public static final String REQUEST_KEY = "Введите ключ для шифрования:";
     public static final String ENCRYPT_GO = "Зашифровываю ваш файл...";
     public static final String ENCRYPT_DONE = "Зашифрованный файл сохранен с именем: ";
     public static final String DECRYPT_GO = "Расшифровываю ваш файл...";

@@ -19,7 +19,8 @@ public class FileManager {
     public boolean writeFile(String content, String filePath) {
         Path path = Path.of(filePath);
         try {
-            Files.writeString(path, content, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE_NEW);
+            Files.writeString(path, content, StandardOpenOption.TRUNCATE_EXISTING,
+                    StandardOpenOption.WRITE, StandardOpenOption.CREATE);
             return true;
         } catch (IOException e) {
             System.out.println(Texts.ERROR_FILE_WRITE);

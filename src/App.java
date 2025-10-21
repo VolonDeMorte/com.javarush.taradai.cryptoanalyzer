@@ -65,7 +65,7 @@ public class App {
         inputFilePath = requestInputFilePath();
         System.out.println(Texts.BRUTEFORCE_GO);
         int countWritedFiles = 0;
-        for (int i = 0; i < cipher.ALPHABET_SIZE; i++) {
+        for (int i = 1; i <= cipher.ALPHABET_SIZE; i++) {
             outputFilePath = generateOutputFilePath(inputFilePath, "_decrypted_key" + i);
             String inputText = fileManager.readFile(inputFilePath);
             if (inputText != null && !inputText.isEmpty()) {

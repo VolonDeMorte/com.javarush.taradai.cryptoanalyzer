@@ -27,9 +27,16 @@ public class Cipher {
                 char currentChar = text.toLowerCase().charAt(i);
                 if (ALPHABET.contains(currentChar)) {
                     int currentCharIndex = ALPHABET.indexOf(currentChar);
-                    encryptedText.append(ALPHABET.get(currentCharIndex + key % ALPHABET_SIZE +
-                            (currentCharIndex + key % ALPHABET_SIZE) > ALPHABET_SIZE ? (-ALPHABET_SIZE) :
-                            (currentCharIndex + key % ALPHABET_SIZE) < 0 ? ALPHABET_SIZE : 0));
+                    int encryptedCharIndex = currentCharIndex + key % ALPHABET_SIZE;
+                    if (encryptedCharIndex >= ALPHABET_SIZE) {
+                        encryptedCharIndex -= ALPHABET_SIZE;
+                    } else if (encryptedCharIndex < 0) {
+                        encryptedCharIndex += ALPHABET_SIZE;
+                    }
+                    encryptedText.append(ALPHABET.get(encryptedCharIndex));
+//                    encryptedText.append(ALPHABET.get(currentCharIndex + key % ALPHABET_SIZE +
+//                            (currentCharIndex + key % ALPHABET_SIZE) >= ALPHABET_SIZE ? (0 - ALPHABET_SIZE) :
+//                            (currentCharIndex + key % ALPHABET_SIZE) < 0 ? ALPHABET_SIZE : 0));
                 } else {
                     encryptedText.append(currentChar);
                 }
