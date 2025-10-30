@@ -1,12 +1,13 @@
+package service;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Cipher {
-
+public class CipherService {
     public static final int ALPHABET_SIZE = 41;
     private static final ArrayList<Character> ALPHABET = new ArrayList<>(ALPHABET_SIZE);
 
-    public Cipher() {
+    public CipherService() {
         initializeAlphabet(ALPHABET);
     }
 

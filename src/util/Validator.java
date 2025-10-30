@@ -1,8 +1,9 @@
+package util;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class Validator {
-
     public static boolean isFileExists(String filePath) {
         Path path = Path.of(filePath);
         if (Files.exists(path)) {
